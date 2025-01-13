@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 3</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .player1 {
+            background-color: blue;
+        }
+        .player2 {
+            background-color: green;
+        }
+        .player3 {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="homepage">
+        <h1>Connect 3</h1>
+        <button id="joinButton">Join Game</button>
+        <h3 id="playerSlots">Player Slots:</h3>
+        <ul id="playerList">
+            <li>Player 1: <span id="player1">Empty</span></li>
+            <li>Player 2: <span id="player2">Empty</span></li>
+            <li>Player 3: <span id="player3">Empty</span></li>
+        </ul>
+        <button id="startButton" style="display: none;">Start Game</button>
+    </div>
+    <div id="gamepage" style="display: none;">
+        <h2 id="turnBanner">Waiting for game to start...</h2>
+        <h3 id="playerBanner"></h3>
+        <table id="board"></table>
+        <h2 id="resultBanner" style="display: none;"></h2>
+        <button id="returnButton" style="display: none;">Return to Lobby</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="connect3.js"></script>
+</body>
+</html>

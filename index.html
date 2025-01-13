@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 3</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .player1 {
+            background-color: red;
+        }
+        .player2 {
+            background-color: yellow;
+        }
+        .player3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Connect 3</h1>
+    <div>
+        <label for="numPlayers">Enter the number of players: </label>
+        <input type="number" id="numPlayers" min="2" max="3" value="2">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <table id="board"></table>
+    <script src="connect3.js"></script>
+</body>
+</html>
